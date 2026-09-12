@@ -127,7 +127,10 @@ function TaskForm({
         }
         onSubmit({
             ...form,
-            title: form.title.trim()
+            title: form.title.trim(),
+            dueDate: form.dueDate
+                ? new Date(form.dueDate).toISOString()
+                : null
         });
     };
 
