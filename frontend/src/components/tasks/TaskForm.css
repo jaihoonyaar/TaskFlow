@@ -1,0 +1,224 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-field label {
+    color: var(--text-secondary);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-field textarea,
+.form-field select,
+.form-field input {
+    width: 100%;
+
+    color: var(--text-primary);
+    background: var(--surface-secondary);
+
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: border-color var(--transition-fast);
+}
+
+.form-field textarea {
+    padding: 11px 12px;
+
+    resize: vertical;
+}
+
+.form-field select,
+.form-field input {
+    height: 40px;
+
+    padding: 0 11px;
+}
+
+.form-field textarea:focus,
+.form-field select:focus,
+.form-field input:focus {
+    border-color: var(--border-focus);
+}
+
+.form-field input[type="date"] {
+    color-scheme: dark;
+}
+
+.task-form-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.task-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+
+    margin-top: 5px;
+}
+
+@media (max-width: 520px) {
+    .task-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.character-count {
+    margin-top: 5px;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+
+    text-align: right;
+}
+.task-form-select {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 11px;
+
+    color: var(--text-primary);
+
+    background: var(--surface-secondary);
+
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+            border-color var(--transition-fast),
+            box-shadow var(--transition-fast);
+}
+
+.task-form-select:focus {
+    border-color: var(--accent-primary);
+
+    box-shadow:
+            0 0 0 3px
+            rgba(124, 108, 255, 0.12);
+}
+
+.task-form-select option {
+    color: var(--text-primary);
+    background: var(--surface-secondary);
+}
+.task-form-error {
+    padding: 9px 11px;
+
+    color: var(--color-danger);
+
+    background: rgba(239, 68, 68, 0.08);
+
+    border: 1px solid rgba(239, 68, 68, 0.18);
+    border-radius: 7px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+.notification-permission-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 11px 12px;
+
+    background: rgba(124, 108, 255, 0.06);
+
+    border: 1px solid rgba(124, 108, 255, 0.16);
+    border-radius: 8px;
+}
+
+.notification-permission-box > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.notification-permission-box strong {
+    color: var(--text-primary);
+
+    font-size: 11px;
+}
+
+.notification-permission-box span {
+    color: var(--text-muted);
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.notification-enable-button {
+    flex-shrink: 0;
+
+    height: 30px;
+
+    padding: 0 11px;
+
+    color: var(--text-primary);
+
+    background: var(--accent-primary);
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.notification-enable-button:hover {
+    opacity: 0.9;
+}
+
+.notification-denied-box {
+    padding: 9px 11px;
+
+    color: var(--color-warning);
+
+    background: rgba(245, 158, 11, 0.07);
+
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    border-radius: 7px;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .notification-permission-box {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .notification-enable-button {
+        width: 100%;
+    }
+}

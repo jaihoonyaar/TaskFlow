@@ -1,0 +1,161 @@
+.settings-page {
+    max-width: 900px;
+
+    padding-top: 34px;
+    padding-bottom: 50px;
+}
+
+.settings-header {
+    margin-bottom: 28px;
+}
+
+.settings-section {
+    padding: 22px;
+
+    margin-bottom: 12px;
+
+    background: var(--surface-primary);
+
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+}
+
+.settings-section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.settings-section-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: var(--accent-primary);
+
+    background: rgba(124, 108, 255, 0.1);
+
+    border-radius: 8px;
+}
+
+.settings-section-header h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.settings-section-header p {
+    margin: 4px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+.settings-profile {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 15px;
+
+    background: var(--surface-secondary);
+
+    border: 1px solid var(--border-subtle);
+    border-radius: 9px;
+}
+
+.settings-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background: var(--accent-primary);
+
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.settings-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.settings-name {
+    color: var(--text-primary);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.settings-email {
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+.security-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 10px;
+
+    color: var(--color-success);
+
+    background: rgba(34, 197, 94, 0.08);
+
+    border: 1px solid rgba(34, 197, 94, 0.15);
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.security-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--color-success);
+}
+
+.danger-section {
+    border-color: rgba(239, 68, 68, 0.15);
+}
+
+.danger-icon {
+    color: var(--color-danger);
+
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.danger-section button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+@media (max-width: 600px) {
+    .settings-page {
+        padding-top: 24px;
+    }
+}

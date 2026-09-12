@@ -1,29 +1,15 @@
-import { useEffect, useState } from "react";
-import api from "./services/api";
+import AppRoutes from './routes/AppRoutes';
+import AuthProvider from './context/AuthContext';
+import ToastProvider from './context/ToastContext';
 
 function App() {
-  const [message, setMessage] = useState("Connecting to TaskFlow API...");
-
-  useEffect(() => {
-    const checkBackend = async () => {
-      try {
-        const response = await api.get("/health");
-        setMessage(response.data.message);
-      } catch (error) {
-        setMessage("Unable to connect to TaskFlow API");
-        console.error(error);
-      }
-    };
-
-    checkBackend();
-  }, []);
-
-  return (
-      <div>
-        <h1>TaskFlow</h1>
-        <p>{message}</p>
-      </div>
-  );
+    return (
+        <AuthProvider>
+            <ToastProvider>
+                <AppRoutes />
+            </ToastProvider>
+        </AuthProvider>
+    );
 }
 
 export default App;

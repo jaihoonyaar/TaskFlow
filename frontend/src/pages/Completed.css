@@ -1,0 +1,141 @@
+.completed-page {
+    padding-top: 34px;
+    padding-bottom: 50px;
+}
+
+.completed-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+.completed-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 9px;
+
+    color: var(--color-success);
+
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.completed-tasks-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--text-secondary);
+
+    background: transparent;
+    border: none;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.completed-tasks-link:hover {
+    color: var(--text-primary);
+}
+
+.completed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.completed-loading {
+    padding: 50px;
+
+    text-align: center;
+
+    color: var(--text-muted);
+
+    background: var(--surface-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+
+    font-size: 13px;
+}
+
+.completed-empty {
+    padding: 75px 20px;
+
+    text-align: center;
+
+    background: var(--surface-primary);
+
+    border: 1px dashed var(--border-default);
+    border-radius: var(--radius-lg);
+}
+
+.completed-empty-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    color: var(--color-success);
+
+    background: rgba(34, 197, 94, 0.1);
+
+    border-radius: 13px;
+}
+
+.completed-empty h3 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+}
+
+.completed-empty p {
+    margin: 7px 0 20px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+.completed-empty button {
+    height: 36px;
+
+    padding: 0 13px;
+
+    color: var(--text-primary);
+
+    background: var(--surface-secondary);
+
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.completed-empty button:hover {
+    background: var(--surface-hover);
+}
+
+@media (max-width: 650px) {
+    .completed-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

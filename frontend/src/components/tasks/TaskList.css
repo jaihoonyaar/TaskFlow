@@ -1,0 +1,99 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-skeleton {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    min-height: 85px;
+    padding: 17px 18px;
+
+    background: var(--surface-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+
+.skeleton-circle {
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--surface-tertiary);
+}
+
+.skeleton-content {
+    flex: 1;
+}
+
+.skeleton-title {
+    width: 45%;
+    height: 14px;
+
+    margin-bottom: 13px;
+
+    border-radius: 5px;
+
+    background: var(--surface-tertiary);
+}
+
+.skeleton-meta {
+    width: 30%;
+    height: 9px;
+
+    border-radius: 4px;
+
+    background: var(--surface-tertiary);
+}
+
+.task-empty-state {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: var(--surface-primary);
+    border: 1px dashed var(--border-default);
+    border-radius: var(--radius-lg);
+}
+
+.empty-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    color: var(--accent-primary);
+
+    background: rgba(124, 108, 255, 0.1);
+
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.task-empty-state h3 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+}
+
+.task-empty-state p {
+    margin: 6px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
